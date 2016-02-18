@@ -1,3 +1,3 @@
-import DeviseAuthorizer from 'ember-simple-auth/authorizers/devise';
+import DeviseAuthenticator from 'ember-simple-auth/authenticators/devise';
 
 export default DeviseAuthenticator.extend();
