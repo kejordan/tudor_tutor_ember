@@ -1,9 +1,9 @@
 
 <h2 id="title">Welcome to the Tudor Tutor</h2>
-{{#if session.isAuthenticated}}
-<li><button {{action "logout"}}>Logout</button></li>
-{{else}}
-<li>{{link-to 'Login' 'login'}}</li>
-<li>{{link-to 'Signup' 'signup'}}</li>
-{{/if}}
+  {{#if session.isAuthenticated}}
+    <li><button {{action "logout"}}>Logout</button></li>
+  {{else}}
+    <li>{{link-to 'Login' 'login'}}</li>
+    <li>{{link-to 'Signup' 'signup'}}</li>
+  {{/if}}
 {{outlet}}

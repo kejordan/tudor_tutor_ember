@@ -1,7 +1,7 @@
 /* jshint node: true */
 
 // contentSecurityPolicy: {
-//   connect-src : '*';
+//   'connect-src': '*'
 // }
 
 module.exports = function(environment) {
