@@ -1,5 +1,9 @@
 /* jshint node: true */
 
+// contentSecurityPolicy: {
+//   connect-src : '*';
+// }
+
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'tudor-tutor',
