@@ -1,19 +1,24 @@
 import Ember from 'ember';
 
 const { service } = Ember.inject;
+const { store } = Ember.inject;
 
 export default Ember.Component.extend({
   session: service('session'),
+  store: service("store"),
 
   actions: {
-    authenticate: function(){
+    authenticate(){
       let { identification, password } = this.getProperties('identification', 'password');
-        return this.get('session').authenticate('authenticator:devise', identification, password).then(()=>{
-          console.log(this.get("session.isAuthenticated"));
-             }).catch((reason) => {
-          this.set('errorMessage', reason.error);
-      });
-    }
+            this.get('session').authenticate('authenticator:devise', identification, password).then(()=>{
+            this.get('store').findRecord('user', 'me').then((user) => {
+              console.log(user);
+              this.attrs.triggerSetCurrentUser(user);
+            });
+          }).catch((reason)=> {
+            this.set('errorMessage', reason.error || reason);
+          });
+    },
   }
 });
 

@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('user', {path: "/users/:user_id"});
   this.route('signup');
   this.route('dashboard');
+  this.route('program');
 });
 
 export default Router;
