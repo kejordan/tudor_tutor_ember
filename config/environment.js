@@ -1,17 +1,5 @@
 /* jshint node: true */
 
-// contentSecurityPolicy: {
-//   'connect-src': '*'
-// }
-// contentSecurityPolicy: {
-//   'default-src': "'none'",
-//   'font-src': "'self'",
-//   'img-src': "'self'",
-//   'media-src': "'self'",
-//   'style-src': "'self' 'unsafe-inline'",
-//   'script-src': "'self' 'unsafe-eval' http://ip_to_rails_api",
-//   'connect-src': "'self' ws://ip_to_rails_api"
-// }
 
 module.exports = function(environment) {
   var ENV = {

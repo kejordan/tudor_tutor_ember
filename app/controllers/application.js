@@ -3,14 +3,13 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   currentUser:null,
   session: Ember.inject.service('session'),
-  actions: {
+
   updateCurrentUser: function () {
     if (this.get("session.isAuthenticated")) {
       this.get('store').findRecord('user', 'me').then((user) => {
-        this.set("currentUser", this.store.createRecord('user', {email: user._internalMode._data.email}));
+        user = this.store.createRecord('user', {email: user._internalModel._data.email, password: user._internalModel._data.password});
+        this.set('currentUser', user);
       });
     }
-  }.on('init').transitionTo('users/user.id')
-
-}
+  }.on('init')
 });
