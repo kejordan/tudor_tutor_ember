@@ -1,8 +1,9 @@
 {{outlet}}
+
 <h2>{{name}}</h2>
  <ul>
-   <h4><li>{{link-to "Add New Program" 'programs.new'}}</li></h4>
+   <h4>{{link-to "Add New Program" 'programs.new'}}</h4>
    {{#each model as |program|}}
-    <li>{{link-to program.title 'programs.program' program}}</li>
+    <p>{{link-to program.title 'programs.program' program}}</p>
    {{/each}}
  </ul>

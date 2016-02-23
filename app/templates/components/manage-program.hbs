@@ -1,19 +1,13 @@
 <form class="form-horizontal" {{action "submit" on="submit"}}>
   <fieldset>
-    <legend>New Program</legend>
+    <legend>Add a New Program</legend>
     <div class="form-group">
-      <label for="program-title" class="col-lg-2 control-label">Title</label>
-      {{input value=program.title class="form-control" id="program-title"}}
-
-      <div class="col-lg-10">
-        <input type="text" class="form-control" id="inputTitle" placeholder="Title">
-      </div>
+      <label for="program-title" class="form-control col-lg-10">
+      {{input value=program.title id="program-title" placeholder="Enter Program Title Here"}}</label>
     </div>
 
-    
-
     <div class="form-group">
-      <div class="col-lg-10 col-lg-offset-2">
+      <div class="col-lg-10">
         <button type="submit" class="btn btn-default">Submit</button>
       </div>
     </div>
