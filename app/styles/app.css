@@ -1,0 +1,9 @@
+.bs-component {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  margin-top: 0px;
+  margin-left: -300px;
+  height: auto;
+  width: auto;
+}
