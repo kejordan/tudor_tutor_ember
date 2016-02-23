@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('dashboard');
   this.route('programs', function() {
     this.route('program', {path: ':program_id'});
+    this.route('new');
   });
   this.route('posts', function(){
     this.route('post', {path: ':post_id'});
