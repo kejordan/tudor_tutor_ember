@@ -6,10 +6,10 @@ export default Ember.Route.extend({
       return "Your name";
     },
     actions:{
-  getCurrentUser(){
-    this.store.findRecord('user', 'me').then((user => {
-      this.transitionTo('users/user_id');
-    }));
-  }
-}
+      getCurrentUser(){
+        this.store.findRecord('user', 'me').then((user => {
+          this.transitionTo('users/user_id');
+        }));
+      }
+    }
 });

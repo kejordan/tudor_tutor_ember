@@ -14,8 +14,8 @@ Router.map(function() {
   this.route('programs', function() {
     this.route('program', {path: ':program_id'});
   });
-  this.route('contents', function(){
-    this.route('post', {path: ':content_id'});
+  this.route('posts', function(){
+    this.route('post', {path: ':post_id'});
   });
 });
 

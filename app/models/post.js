@@ -1,6 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
+    program: DS.belongsTo('program'),
     title: DS.attr('string'),
-    content: DS.attr('string')
+    post: DS.attr('string')
 });
