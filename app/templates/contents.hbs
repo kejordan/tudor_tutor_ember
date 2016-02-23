@@ -1,0 +1,8 @@
+{{outlet}}
+<h2>{{name}}</h2>
+ <ul>
+   {{#each model as |content|}}
+    <li>{{link-to content.title 'contents.post' post}}</li>
+   {{/each}}
+ </ul>
+
