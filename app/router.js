@@ -13,7 +13,10 @@ Router.map(function() {
   this.route('dashboard');
   this.route('programs', function() {
     this.route('program', {path: ':program_id'});
-});
+  });
+  this.route('contents', function(){
+    this.route('post', {path: ':content_id'});
+  });
 });
 
 export default Router;
