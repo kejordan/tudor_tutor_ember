@@ -1,12 +1,15 @@
-{{outlet}}
+<div class='container'>
+  
+  {{outlet}}
 
-<h2>{{name}}</h2>
+  <h2>Programs</h2>
 
-<h4><{{link-to "Add New Program" 'programs.new'}}</h4>
+    <h4><{{link-to "Add New Program" 'programs.new'}}</h4>
 
-   {{#each model as |program|}}
+      {{#each model as |program|}}
 
-  <p>{{link-to program.title 'programs.program' program}}</p>
-
+        <p>{{link-to program.title 'programs.program' program}}</p>
 
    {{/each}}
+   
+</div>
