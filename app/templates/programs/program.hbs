@@ -1,7 +1,10 @@
 <div class="container">
   <h1>{{model.title}}</h1>
-
-  {{ember-youtube ytid=model.youTubeId autoplay=true}}
-
+    <div id="video-container">
+    <iframe id="ytplayer" type="text/html" width="640" height="390"
+  src="http://www.youtube.com/embed/{{model.youTubeId}}?autoplay=1&origin=http://example.com"
+  frameborder="0"/>
+      
+    </div>
   {{outlet}}
 </div>
